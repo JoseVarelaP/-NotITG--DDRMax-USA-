@@ -1,0 +1,36 @@
+<ActorFrame><children>
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- We want that stretch to happen in XML, so we need to manually set a setzoom to make it happen, because that's how it's made. -->
+	<!-- Why is SCREEN_WIDTH and SCREEN_HEIGHT on *2? It's because of how SM handles sizing to 'FullScreen', there's a little gap that appears if you just let it on normal SCREEN_WIDTH/HEIGHT, and applying double the size fixes it. -->
+	<Layer4 File="../white.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffusealpha,1;linear,0.165;diffusealpha,0" />
+	<Layer1 File="1.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;sleep,8.165;diffusealpha,0" />
+	<Layer5 File="../white.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffusealpha,0;sleep,8;linear,0.165;diffusealpha,1;linear,0.165;diffusealpha,0" />
+	<Layer2 File="2.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,0;sleep,8.165;diffusealpha,1;sleep,6.165;diffusealpha,0" />
+	<Layer6 File="../white.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffusealpha,0;sleep,14.165;linear,0.165;diffusealpha,1" />
+</children></ActorFrame>
+[BGAnimation]
+
+[Layer4]
+File=../white.png
+Type=1
+Command=diffusealpha,1;linear,0.165;diffusealpha,0
+
+[Layer1]
+File=1.png
+Type=0
+Command=sleep,8.165;diffusealpha,0
+
+[Layer5]
+File=../white.png
+Type=1
+Command=diffusealpha,0;sleep,8;linear,0.165;diffusealpha,1;linear,0.165;diffusealpha,0
+
+[Layer2]
+File=2.png
+Type=0
+Command=diffusealpha,0;sleep,8.165;diffusealpha,1;sleep,6.165;diffusealpha,0
+
+[Layer6]
+File=../white.png
+Type=1
+Command=diffusealpha,0;sleep,14.165;linear,0.165;diffusealpha,1

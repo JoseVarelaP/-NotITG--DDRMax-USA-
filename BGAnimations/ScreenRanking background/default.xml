@@ -1,0 +1,46 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(32.68) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<Layer File="bg.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+
+	<Layer File="rank.png" OnCommand="x,SCREEN_CENTER_X+(-9-320);y,SCREEN_CENTER_Y+(51-240);horizalign,right;sleep,0.264;linear,0.198;addx,260;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1" />
+
+	<Layer Type="ActorFrame" OnCommand="x,SCREEN_CENTER_X+(730-320);y,SCREEN_CENTER_Y+(51-240)"><children>
+
+		<Layer File="type1.png" OnCommand="horizalign,left;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type2.png" OnCommand="horizalign,left;sleep,5.875;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type3.png" OnCommand="horizalign,left;sleep,11.75;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type4.png" OnCommand="horizalign,left;sleep,17.625;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type5.png" OnCommand="horizalign,left;sleep,23.5;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type6.png" OnCommand="horizalign,left;sleep,29.375;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type7.png" OnCommand="horizalign,left;sleep,35.25;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type8.png" OnCommand="horizalign,left;sleep,41.125;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type9.png" OnCommand="horizalign,left;sleep,47.2;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+		<Layer File="type10.png" OnCommand="horizalign,left;sleep,0.2;sleep,52.875;sleep,0.594;linear,0.198;addx,-330;zoomx,1;linear,0.066;zoomx,0.8;linear,0.165;zoomx,1.1;linear,0.066;zoomx,1;sleep,3.268;sleep,1.089;sleep,0.303;decelerate,0.06;addy,-8;sleep,0.033;accelerate,0.33;addy,+70" />
+
+	</children></Layer>
+
+	<Layer File="bg.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;croptop,0.179" />
+
+</children></ActorFrame>
+
+[Layer1]
+Type=0
+File=bg.png
+Command=
+
+[Layer20]
+Type=0
+File=bg.png
+Command=croptop,0.179

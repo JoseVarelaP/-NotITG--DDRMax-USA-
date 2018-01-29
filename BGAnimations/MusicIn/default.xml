@@ -1,0 +1,15 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<!-- This will play a sound! Check Utilities.lua to see how it works! -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) AudioPlay('_swoosh.ogg') self:sleep(1.098) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<Layer File="../_moveon.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,1;zoomy,1;linear,0.264;zoomy,0.3;diffusealpha,0.1;linear,0;diffusealpha,0" />
+	<Layer File="../h0.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(27-240);" />
+	<Layer File="../h1.png" OnCommand="x,SCREEN_CENTER_X+(424-320);y,SCREEN_CENTER_Y+(27-240);horizalign,left;sleep,0.264;sleep,0.02;accelerate,0.2;x,34;linear,0.066;zoomx,1.5;linear,0.066;zoomx,1;linear,0.066;zoomx,1.3;linear,0.066;zoomx,1;linear,0.066;zoomx,1.1;linear,0.066;zoomx,1" />
+	<Layer File="../h1.png" OnCommand="x,SCREEN_CENTER_X+(472-230);y,SCREEN_CENTER_Y+(27-240);" />
+	<Layer File="../h1.png" OnCommand="x,SCREEN_CENTER_X+(480-230);y,SCREEN_CENTER_Y+(27-240);horizalign,left;cropright,1;sleep,0.264;sleep,0.04;accelerate,0.2;x,58;cropright,0" />
+	<Layer File="../h1.png" OnCommand="x,SCREEN_CENTER_X+(496-230);y,SCREEN_CENTER_Y+(27-240);" />
+	<Layer File="../h1.png" OnCommand="x,SCREEN_CENTER_X+(480-230);y,SCREEN_CENTER_Y+(27-240);horizalign,left;cropright,1;sleep,0.264;sleep,0.04;accelerate,0.2;x,58;cropright,0;linear,0.066;addx,5;linear,0.066;addx,-5;linear,0.066;addx,5;linear,0.066;addx,-5;linear,0.066;addx,5;linear,0.066;addx,-5" />
+</children></ActorFrame>

@@ -1,0 +1,19 @@
+<ActorFrame><children>
+	<Layer File="00095.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- We want that stretch to happen in XML, so we need to manually set a setzoom to make it happen, because that's how it's made. -->
+	<!-- Why is SCREEN_WIDTH and SCREEN_HEIGHT on *2? It's because of how SM handles sizing to 'FullScreen', there's a little gap that appears if you just let it on normal SCREEN_WIDTH/HEIGHT, and applying double the size fixes it. -->
+	<Layer File="../white.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffusealpha,0;sleep,9.735;linear,0.165;diffusealpha,1;sleep,0.1" />
+</children></ActorFrame>
+[BGAnimation]
+
+[Layer1]
+File=00095.png
+Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
+Command=
+
+[Layer5]
+File=../white.png
+Type=1
+Command=diffusealpha,0;sleep,9.735;linear,0.165;diffusealpha,1;sleep,0.1

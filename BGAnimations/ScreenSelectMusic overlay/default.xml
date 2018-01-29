@@ -1,0 +1,51 @@
+<ActorFrame><children>
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<Layer File="../footer.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(457-240);shadowlength,0" />
+
+	<Layer File="../select.png" OnCommand="%function(self)
+	self:x( SCREEN_CENTER_X+(429-320) );
+	self:y( SCREEN_CENTER_Y+(446-240) );
+	self:diffuseblink()
+	--self:diffusealpha(0)
+	self:diffusealpha(1)
+	self:sleep(3)
+	self:queuecommand('BlinkAnimationForNextInstruction')
+	end"
+	BlinkAnimationForNextInstructionCommand="%function(self)
+	self:addy(999)
+	self:sleep(3)
+	self:queuecommand('ReturnToNormalAnimation')
+	end"
+	ReturnToNormalAnimationCommand="%function(self)
+	self:addy(-999)
+	self:sleep(3)
+	self:queuecommand('BlinkAnimationForNextInstruction')
+	end" />
+
+	<Layer File="../difficulty.png" OnCommand="%function(self)
+	self:x( SCREEN_CENTER_X+(429-320) );
+	self:y( SCREEN_CENTER_Y+(446-240) );
+	self:diffuseblink()
+	self:diffusealpha(0)
+	self:sleep(3)
+	self:diffusealpha(1)
+	self:sleep(3)
+	self:queuecommand('BlinkAnimationForNextInstruction')
+	end"
+	BlinkAnimationForNextInstructionCommand="%function(self)
+	self:addy(999)
+	self:sleep(3)
+	self:queuecommand('ReturnToNormalAnimation')
+	end"
+	ReturnToNormalAnimationCommand="%function(self)
+	self:addy(-999)
+	self:sleep(3)
+	self:queuecommand('BlinkAnimationForNextInstruction')
+	end" />
+
+	<Layer File="../footer.png" Condition="IsExtraStage() or IsExtraStage2() or PlayModeName() == 'Oni' or PlayModeName() == 'Nonstop' or PlayModeName() == 'Endless'" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(26-240);shadowlength,0" />
+
+	<Layer File="../footer.png" Condition="IsExtraStage() or IsExtraStage2() or PlayModeName() == 'Oni' or PlayModeName() == 'Nonstop' or PlayModeName() == 'Endless'" OnCommand="xx,SCREEN_CENTER_X+(429-320);y,SCREEN_CENTER_Y+(446-240);shadowlength,0;addy,999;sleep,0.264;sleep,0.789;addy,-999;diffuseblink;effectperiod,1.056" />
+	<Layer File="@ThemeFile('_shared options header.png')" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(26-240);shadowlength,0" />
+</children></ActorFrame>

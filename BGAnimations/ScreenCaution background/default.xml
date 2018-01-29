@@ -1,0 +1,14 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(4.059) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<Layer File="stretchstill.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+</children></ActorFrame>
+[BGAnimation]
+LengthSeconds=4.059
+
+[Layer1]
+File=stretchstill.png
+Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
+Command=

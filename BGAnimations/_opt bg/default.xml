@@ -1,0 +1,4 @@
+<ActorFrame><children>
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<Layer File="../_opt bg.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+</children></ActorFrame>

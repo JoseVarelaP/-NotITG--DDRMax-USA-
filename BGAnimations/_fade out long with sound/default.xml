@@ -1,0 +1,8 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<!-- This will play a sound! Check Utilities.lua to see how it works! -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(1) end" />
+
+	<!-- This imports a file from another animation to make it play here. It is really efficient if you want the same animation to play on several screens, and it saves typing the same stuff over and over again. -->
+	<Layer File="../_fade out long" />
+</children></ActorFrame>

@@ -1,0 +1,9 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<!-- This will play a sound! Check Utilities.lua to see how it works! -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(1.32) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<Layer File="../_moveon.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,0;sleep,1.056;diffusealpha,0.1;zoomy,0.3;linear,0.264;diffusealpha,1;zoomy,1" />
+</children></ActorFrame>

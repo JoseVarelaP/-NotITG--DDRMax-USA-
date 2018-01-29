@@ -1,0 +1,8 @@
+<ActorFrame><children>
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<Layer File="@ThemeFile('ScreenInstructions regular.png')"
+		OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;addx,-SCREEN_WIDTH;decelerate,0.5;addx,SCREEN_WIDTH"
+		PressStartMessageCommand="playcommand,GoOff"
+		MadeChoiceP2MessageCommand="playcommand,GoOff"
+		GoOffCommand="accelerate,0.5;addx,SCREEN_WIDTH" />
+</children></ActorFrame>

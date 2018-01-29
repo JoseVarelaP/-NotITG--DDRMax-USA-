@@ -1,0 +1,60 @@
+<ActorFrame><children>
+	<!-- OpenITG likes to make the playfield hallway, let's fix that. -->
+	<Layer Type="Quad" OnCommand="%function(self) GAMESTATE:ApplyGameCommand('mod, overhead') end" />
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<Layer File="../_black.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffusealpha,1;linear,0.264;diffusealpha,0" />
+
+	<!-- Time for the screen objects -->
+	<Layer File="howtoplay.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;sleep,1.485;diffusealpha,0" />
+	<Layer File="steps.png" OnCommand="x,SCREEN_CENTER_X+(463-320);y,SCREEN_CENTER_Y+(241-240);zoomy,0;sleep,1.683;linear,0.198;zoomy,1;sleep,2.5;diffusealpha,0" />
+	<Layer File="lifeframe" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(0-240);vertalign,top;addy,-84;diffuse,0,0,0,1;sleep,0;linear,0.495;diffuse,1,1,1,1;addy,84" />
+	<Layer File="../_black.png" OnCommand="zoomto,640,70;x,SCREEN_CENTER_X+(0-320);y,SCREEN_CENTER_Y+(480-240);horizalign,left;vertalign,bottom;" />
+	<Layer File="../ScreenDemonstration overlay/demdown.png" OnCommand="x,SCREEN_CENTER_X+(640-320);y,SCREEN_CENTER_Y+(416-240);horizalign,right;vertalign,top" />
+
+	<!-- First Step, UP ARROW -->
+	<Layer File="taphand.png" OnCommand="x,SCREEN_CENTER_X+(544-320);y,SCREEN_CENTER_Y+(250-240);diffusealpha,0;sleep,7.738;diffusealpha,1;linear,0.1;y,170;sleep,1.5;linear,0.1;y,250;linear,0;diffusealpha,0" />
+	<Layer File="tapmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(299-240);zoomy,0;sleep,7.738;linear,0.264;zoomy,1;sleep,1.436;diffusealpha,0" />
+
+	<!-- Second Step, JUMP -->
+	<Layer File="jumphands.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(250-240);diffusealpha,0;sleep,11.038;diffusealpha,1;linear,0.1;y,170;sleep,1.5;linear,0.1;y,250;linear,0;diffusealpha,0" />
+	<Layer File="jumpmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(299-240);zoomy,0;sleep,11.038;linear,0.264;zoomy,1;sleep,1.336;diffusealpha,0" />
+
+	<!-- 1st Hold Step -- UP -->
+	<Layer File="taphand.png" OnCommand="x,SCREEN_CENTER_X+(544-320);y,SCREEN_CENTER_Y+(170-240);diffusealpha,0;bob;effectperiod,0.5;effectmagnitude,0,15,0;sleep,14.238;diffusealpha,1;sleep,1.6;linear,0;diffusealpha,0" />
+	<Layer File="freeze_one.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(299-240);zoomy,0;sleep,14.238;linear,0.264;zoomy,1;sleep,1.336;diffusealpha,0" />
+
+	<!-- 2nd Hold Step -- JUMP -->
+	<Layer File="jumphands.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(170-240);diffusealpha,0;bob;effectperiod,0.5;effectmagnitude,0,15,0;sleep,17.838;diffusealpha,1;sleep,1.6;linear,0;diffusealpha,0" />
+	<Layer File="freeze_two.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(299-240);zoomy,0;sleep,17.838;linear,0.264;zoomy,1;sleep,1.336;diffusealpha,0" />
+
+	<!-- 3rd Hold Step -- No GOOD (UP) -->
+	<Layer File="taphand.png" OnCommand="x,SCREEN_CENTER_X+(544-320);y,SCREEN_CENTER_Y+(170-240);diffusealpha,0;bob;effectperiod,0.5;effectmagnitude,0,15,0;sleep,20.838;diffusealpha,1;sleep,1.6;linear,0;diffusealpha,0" />
+	<Layer File="ng.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(299-240);zoomy,0;sleep,20.838;linear,0.264;zoomy,1;sleep,1.436;diffusealpha,0" />
+
+	<!-- MissStep -->
+	<Layer File="miss.png" OnCommand="diffusealpha,0;x,SCREEN_CENTER_X+(92-320);y,SCREEN_CENTER_Y+(250-240);sleep,22.938;diffusealpha,1;linear,0.198;y,115;linear,0;bob;effectperiod,0.5;effectmagnitude,0,15,0" />
+	<Layer File="missmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(299-240);zoomy,0;sleep,22.938;linear,0.264;zoomy,1" />
+
+	<Layer File="../_black.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffusealpha,0;sleep,25.736;linear,0.264;diffusealpha,1" />
+
+</children></ActorFrame>
+
+//Misstep
+[Layer47]
+Type=0
+File=miss.png
+Command=diffusealpha,0;x,92;y,250;sleep,22.938;diffusealpha,1;linear,0.198;y,115;linear,0;bob;effectperiod,0.5;effectmagnitude,0,15,0
+
+[Layer48]
+Type=0
+File=missmessage.png
+Command=x,480;y,299;zoomy,0;sleep,22.938;linear,0.264;zoomy,1
+
+
+
+// A fade out
+[Layer50]
+File=../_black.png
+Type=1		
+Command=diffusealpha,0;sleep,25.736;linear,0.264;diffusealpha,1

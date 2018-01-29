@@ -1,0 +1,16 @@
+<ActorFrame><children>
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<Layer File="../_shared background.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+	<Layer File="../_moveon.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+</children></ActorFrame>
+[BGAnimation]
+
+[Layer1]
+File=../_shared background.png
+Type=1		// 0=sprite, 1=stretch, 2=particles, 3=tiles
+Command=
+
+[Layer3]
+File=../_moveon.png
+Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
+Command=x,320;y,240

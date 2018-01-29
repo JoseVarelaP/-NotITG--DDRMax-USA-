@@ -1,0 +1,16 @@
+<ActorFrame><children>
+	<Layer File="../_black.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffuse,1,1,1,0.6" />
+	<Layer File="home_warn.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(424-240)" />
+</children></ActorFrame>
+[BGAnimation]
+LengthSeconds=10	// doesn't matter
+
+[Layer2]
+File=../_black.png
+Type=1		// 0=sprite, 1=stretch, 2=particles, 3=tiles
+Command=diffuse,1,1,1,0.6
+
+[Layer3]
+File=home_warn.png
+Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
+Command=x,320;y,424;shadowlength,0
