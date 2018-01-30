@@ -2,14 +2,3 @@
 	<Layer File="../_shared background.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffuse,0,0,0,1;linear,0.264;diffuse,0.5,0.5,0.5,1" />
 	<Layer File="../select.png" OnCommand="x,SCREEN_CENTER_X;y,446;shadowlength,0;diffuseblink;effectperiod,1.056;" />
 </children></ActorFrame>
-[BGAnimation]
-
-[Layer1]
-File=../_shared background.png
-Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
-Command=diffuse,0,0,0,1;linear,0.264;diffuse,0.5,0.5,0.5,1
-
-[Layer2]
-File=../select.png
-Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
-Command=x,320;y,446;shadowlength,0;diffuseblink;effectperiod,1.056;addy,999;sleep,0.264;addy,-999

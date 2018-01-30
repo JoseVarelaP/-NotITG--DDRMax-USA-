@@ -1,5 +1,4 @@
 <ActorFrame><children>
 	<!-- This will act as the BGAnimation LengthSeconds command. -->
-	<!-- This will play a sound! Check Utilities.lua to see how it works! -->
 	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(0.3) end" />
 </children></ActorFrame>

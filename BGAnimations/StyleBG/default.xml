@@ -6,22 +6,3 @@
 	<Layer File="../select.png" Condition="GAMESTATE:IsPlayerEnabled(0)" OnCommand="x,SCREEN_CENTER_X+(149-320);y,SCREEN_CENTER_Y+(446-240);shadowlength,0;diffuseblink;effectperiod,1.056" />
 	<Layer File="../select.png" Condition="GAMESTATE:IsPlayerEnabled(1)" OnCommand="x,SCREEN_CENTER_X+(469-320);y,SCREEN_CENTER_Y+(446-240);shadowlength,0;diffuseblink;effectperiod,1.056" />
 </children></ActorFrame>
-[BGAnimation]
-LengthSeconds=
-
-[Layer1]
-File=../_shared background.png
-Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
-Command=
-
-[Layer2]
-File=../select.png
-Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
-Command=x,149;y,446;shadowlength,0;diffuseblink;effectperiod,1.056
-Condition=IsPlayerEnabled(1) and IsHumanPlayer(1)
-
-[Layer3]
-File=../select.png
-Type=0		// 0=sprite, 1=stretch, 2=particles, 3=tiles
-Command=x,469;y,446;shadowlength,0;diffuseblink;effectperiod,1.056
-Condition=IsPlayerEnabled(2) and IsHumanPlayer(2)
